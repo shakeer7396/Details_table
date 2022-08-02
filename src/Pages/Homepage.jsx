@@ -40,27 +40,21 @@ console.log(getProfile);
         <tbody data-cy="profile-wrapper">
           {/* Map through the profileData received from the json-server on mounting the component to show it in a table format */}
           {getProfile.map((item)=>{
-            return(
-              <>
-              {/* <ProfileDataRow key={item.id} profile={item.profile}/> */}
-              <tr key={item.id}>
-                <th>{item.id}</th>
-                <th><img src={item.profile_pic} /></th>
-                <th>{item.first_name}</th>
-                <th>{item.last_name}</th>
-                <th>{item.email}</th>
-                <th>{item.gender}</th>
-                <th>{item.country}</th>
-
-
-
-
-
-
-
-              </tr>
-              </>
-            )
+            return <ProfileDataRow key={item.id} profile={item}/>
+            // return(
+            //   <>
+              
+            //   <tr key={item.id}>
+            //     <th>{item.id}</th>
+            //     <th><img src={item.profile_pic} /></th>
+            //     <th>{item.first_name}</th>
+            //     <th>{item.last_name}</th>
+            //     <th>{item.email}</th>
+            //     <th>{item.gender}</th>
+            //     <th>{item.country}</th>
+            //   </tr>
+            //   </>
+            // )
           })}
         </tbody>
       </table>
